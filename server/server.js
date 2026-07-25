@@ -1,4 +1,5 @@
 const leadRoutes = require("./Routes/leadRoutes");
+const authRoutes = require("./Routes/authRoutes");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -10,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/leads", leadRoutes);
+app.use("/api/auth", authRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
