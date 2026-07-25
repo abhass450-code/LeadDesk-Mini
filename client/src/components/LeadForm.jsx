@@ -20,10 +20,12 @@ function LeadForm() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/leads",
-        formData
-      );
+      
+        const response = await axios.post(
+  "https://leaddesk-mini-wiv8.onrender.com/api/leads",
+  formData
+);
+
 
       alert(response.data.message);
 

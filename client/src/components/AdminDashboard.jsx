@@ -10,7 +10,7 @@ function AdminDashboard() {
   }, []);
   const updateStatus = async (id, status) => {
   try {
-    await axios.put(`http://localhost:5000/api/leads/${id}`, {
+    await axios.put(`https://leaddesk-mini-wiv8.onrender.com/api/leads/${id}`, {
       status,
     });
 
